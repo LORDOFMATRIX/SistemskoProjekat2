@@ -57,7 +57,7 @@ namespace Gif_Server
                     {
                         string location = request.Url.AbsolutePath.Substring(1); //path bez '/'
                         byte[] file = null;
-                        if ((file = LRUCache.GetFromCache(location))==null)//Cache.ReadFromCache(location)) == null)) 
+                        if ((file = LRUCache.GetFromCache(location))==null)
                         {
 
                             var files = Directory.EnumerateFiles(@"C:\Users\Branko\source\repos\Gif Server\Gif Server\Slike", location, SearchOption.AllDirectories);
